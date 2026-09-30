@@ -9,22 +9,14 @@
 
 An **AI-First Customer Relationship Management (CRM)** platform engineered specifically for **Pharmaceutical and Life Science Field Representatives**.
 
-<<<<<<< HEAD
-Instead of manually filling out repetitive post-meeting forms, field representatives can simply chat with the built-in AI assistant in natural language. A **LangGraph** state machine powered by **Groq (`llama-3.3-70b-versatile`)** automatically extracts structured entities (HCP Name, Specialty, Discussion Topics, Sentiment, Follow-up Date, and Notes), auto-populates the form in real time, and persists records as BSON documents in **MongoDB Atlas**.
-=======
-##  Features
->>>>>>> 69f799f927c326716b11b26b6b954bad5b6ffa12
-
----
-
 ## ✨ Key Features
 
-- **🤖 Conversational AI Entity Extraction:** Chat naturally about doctor visits (e.g., *"Met Dr. Sarah Smith from Cardiology today to discuss Phase 3 trial results; sentiment was positive, follow up next Tuesday"*). The LangGraph workflow (`process` → `extract`) parses the conversation into structured JSON fields automatically.
-- **🪟 Dual-Pane Interaction Logging:** Converse with the AI assistant on the left pane (`ChatInterface`) while watching the structured CRM form (`StructuredForm`) auto-populate in real time on the right pane, with full support for manual review and overrides.
-- **☁️ MongoDB Atlas Cloud Persistence:** Stores interaction logs as native BSON documents in the `hcp_crm.interactions` collection via **PyMongo**, aligning directly with the JSON structures extracted by the AI agent.
-- **📊 Executive Analytics Dashboard:** Real-time KPI summary cards tracking **Total Interactions**, **Unique HCPs**, **Positive Sentiment Count**, and **Follow-ups Pending**, alongside a reverse-chronological interaction feed.
-- **👨‍⚕️ HCP Directory & Instant Search:** Automatically aggregates interactions by Healthcare Professional (`MyHCPs`), displaying specialty, interaction count, latest sentiment badge, recent discussion topics, and instant search filtering by name or specialty.
-- **🎨 Modern SaaS UI with Light & Dark Modes:** Built with a custom CSS3 variable design system and Redux theme management (`themeSlice`), plus configurable profile, notification, security, and AI preferences.
+- ** Conversational AI Entity Extraction:** Chat naturally about doctor visits (e.g., *"Met Dr. Sarah Smith from Cardiology today to discuss Phase 3 trial results; sentiment was positive, follow up next Tuesday"*). The LangGraph workflow (`process` → `extract`) parses the conversation into structured JSON fields automatically.
+- ** Dual-Pane Interaction Logging:** Converse with the AI assistant on the left pane (`ChatInterface`) while watching the structured CRM form (`StructuredForm`) auto-populate in real time on the right pane, with full support for manual review and overrides.
+- ** MongoDB Atlas Cloud Persistence:** Stores interaction logs as native BSON documents in the `hcp_crm.interactions` collection via **PyMongo**, aligning directly with the JSON structures extracted by the AI agent.
+- ** Executive Analytics Dashboard:** Real-time KPI summary cards tracking **Total Interactions**, **Unique HCPs**, **Positive Sentiment Count**, and **Follow-ups Pending**, alongside a reverse-chronological interaction feed.
+- ** HCP Directory & Instant Search:** Automatically aggregates interactions by Healthcare Professional (`MyHCPs`), displaying specialty, interaction count, latest sentiment badge, recent discussion topics, and instant search filtering by name or specialty.
+- ** Modern SaaS UI with Light & Dark Modes:** Built with a custom CSS3 variable design system and Redux theme management (`themeSlice`), plus configurable profile, notification, security, and AI preferences.
 
 ---
 
@@ -92,7 +84,7 @@ HCP Sync/
 │   ├── models.py            # MongoDB BSON document builder & ObjectId serializer helpers
 │   ├── schemas.py           # Pydantic request/response validation schemas
 │   ├── requirements.txt     # Python backend dependencies
-│   └── .env                 # Environment variables (GROQ_API_KEY, MONGODB_URI, MONGODB_DB_NAME)
+│   └── .env                 # Environment variables 
 ├── frontend/
 │   ├── src/
 │   │   ├── components/
@@ -113,7 +105,6 @@ HCP Sync/
 │   │   └── index.css                    # Custom design system & theme CSS variables
 │   ├── package.json
 │   └── vite.config.js
-├── HCP_Sync_Project_Documentation.pdf   # Full System Requirement, Analysis & Design Report
 └── README.md
 ```
 
@@ -199,7 +190,6 @@ npm run dev
 
 ---
 
-<<<<<<< HEAD
 ## 🔒 Environment Variables
 
 | Variable | Required | Description |
@@ -212,7 +202,6 @@ npm run dev
 =======
 ##  Environment Variables
 - `GROQ_API_KEY`: Required for the AI extraction engine to function. Get a free API key at [console.groq.com](https://console.groq.com).
->>>>>>> 69f799f927c326716b11b26b6b954bad5b6ffa12
 
 ##  License
 This project is open-source and available under the MIT License.
