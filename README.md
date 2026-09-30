@@ -199,7 +199,6 @@ npm run dev
 | `MONGODB_DB_NAME` | Optional | Target MongoDB database name (defaults to `hcp_crm`). |
 
 ---
-=======
 ##  Environment Variables
 - `GROQ_API_KEY`: Required for the AI extraction engine to function. Get a free API key at [console.groq.com](https://console.groq.com).
 
