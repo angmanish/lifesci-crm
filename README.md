@@ -9,7 +9,11 @@
 
 An **AI-First Customer Relationship Management (CRM)** platform engineered specifically for **Pharmaceutical and Life Science Field Representatives**.
 
+<<<<<<< HEAD
 Instead of manually filling out repetitive post-meeting forms, field representatives can simply chat with the built-in AI assistant in natural language. A **LangGraph** state machine powered by **Groq (`llama-3.3-70b-versatile`)** automatically extracts structured entities (HCP Name, Specialty, Discussion Topics, Sentiment, Follow-up Date, and Notes), auto-populates the form in real time, and persists records as BSON documents in **MongoDB Atlas**.
+=======
+##  Features
+>>>>>>> 69f799f927c326716b11b26b6b954bad5b6ffa12
 
 ---
 
@@ -62,7 +66,7 @@ flowchart LR
 
 ---
 
-## 🛠️ Technology Stack
+##  Technology Stack
 
 | Layer | Technology / Package | Purpose |
 | :--- | :--- | :--- |
@@ -144,7 +148,7 @@ Each saved HCP interaction is stored in MongoDB Atlas as a BSON document with th
 
 ---
 
-## 💻 Getting Started (Local Development)
+##  Getting Started (Local Development)
 
 ### Prerequisites
 - **Python 3.10+**
@@ -195,6 +199,7 @@ npm run dev
 
 ---
 
+<<<<<<< HEAD
 ## 🔒 Environment Variables
 
 | Variable | Required | Description |
@@ -204,6 +209,10 @@ npm run dev
 | `MONGODB_DB_NAME` | Optional | Target MongoDB database name (defaults to `hcp_crm`). |
 
 ---
+=======
+##  Environment Variables
+- `GROQ_API_KEY`: Required for the AI extraction engine to function. Get a free API key at [console.groq.com](https://console.groq.com).
+>>>>>>> 69f799f927c326716b11b26b6b954bad5b6ffa12
 
-## 📄 License
+##  License
 This project is open-source and available under the MIT License.
