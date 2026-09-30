@@ -3,6 +3,6 @@ uvicorn
 langgraph
 langchain-groq
 langchain-core
-sqlalchemy
+pymongo[srv]
 pydantic
 python-dotenv

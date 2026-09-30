@@ -1,19 +1,16 @@
-from sqlalchemy import create_engine
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import sessionmaker
+import os
+from pymongo import MongoClient
+from dotenv import load_dotenv
 
-SQLALCHEMY_DATABASE_URL = "sqlite:///./hcp_crm.db"
+load_dotenv()
 
-engine = create_engine(
-    SQLALCHEMY_DATABASE_URL, connect_args={"check_same_thread": False}
-)
-SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+MONGODB_URI = os.getenv("MONGODB_URI", "mongodb://localhost:27017")
+DATABASE_NAME = os.getenv("MONGODB_DB_NAME", "hcp_crm")
 
-Base = declarative_base()
+client = MongoClient(MONGODB_URI, serverSelectionTimeoutMS=5000)
+db = client[DATABASE_NAME]
+interactions_collection = db["interactions"]
 
 def get_db():
-    db = SessionLocal()
-    try:
-        yield db
-    finally:
-        db.close()
+    return db
+
